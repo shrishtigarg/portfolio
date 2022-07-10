@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrishti's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar" id="change-color" style="background-color: #000;">
+        <ul>
+            <li><a data-href="#home"  onclick="scrollFunction(`home`)">Home</a></li>
+            <li><a data-href="#about" onclick="scrollFunction(`about`)">About me</a></li>
+            <li><a data-href="#skill" onclick="scrollFunction(`skill`)">Skill</a></li>
+            <li><a data-href="#quali" onclick="scrollFunction(`quali`)">Qualification</a></li>
+            <li><a data-href="#contact" onclick="scrollFunction(`contact`)">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="my-bg">
+        <div class="main"  style="margin: 40px -100px 40px 0px;">
+            <h1 class="headings">I AM <br>SHRISHTI GARG</h1>
+            <button class="btn">
+                Download CV
+            </button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="headings">ABOUT ME</h1>
+        <div id="pic">
+            <img src="./image/PImage.jpg" alt="">
+            <div id="intro">
+                <h2>Hi, My name is Shrishti Garg. I belong to Aligarh. Currently I am pursuing B.tech from ABESIT, Ghaziabad.
+                    I would like to be a part of an organization where I could use and enhance my knowledge and talent for the development of both the organization and myself.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="skill" >
+        <h1 class="headings">SKILLS</h1>
+        <div class="gallery">
+            <img data-aos="fade-down-right" src="image/img1.jpg" alt="">
+            <img data-aos="fade-down" src="image/img2.jpg" alt="">
+            <img data-aos="fade-down-left"  src="image/img3.jpg" alt="">
+            <img data-aos="fade-up-right" src="image/img4.jpg" alt="">
+            <img data-aos="fade-up" src="image/img5.jpg" alt="">
+            <img data-aos="fade-up-left" src="image/img6.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="quali">
+        <h1 class="headings">QUALIFICATION</h1>
+        <div class="row">
+            <div data-aos="zoom-in-left">
+                <div class="box">
+                    <h1 class="headings"  style="padding: 10px;">Graduation</h1>
+                    <p>Currently pursuing from ABESIT, Ghaziabad</p>
+                    <h3 style="padding: 10px;">Subjects</h3>
+                    <ul style="padding: 10px;">
+                        <li style="padding: 5px;">Computer Network</li>
+                        <li style="padding: 5px;">Computer Graphics</li>
+                        <li style="padding: 5px;">C.O.A</li>
+                        <li style="padding: 5px;">Operating Systems</li>
+                        <li style="padding: 5px;">D.A.A</li>
+                        <li style="padding: 5px;">Web Development</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-aos="zoom-in-up">
+                <div class="box">
+                    <h1 class="headings"  style="padding: 10px;">12th</h1>
+                    <p>Completed in 2019, from DPS, Aligarh</p>
+                    <h3 style="padding: 10px;">Subjects</h3>
+                    <ul style="text-align: left;">
+                        <li style="padding: 5px;">Hindi</li>
+                        <li style="padding: 5px;">English</li>
+                        <li style="padding: 5px;">Mathematics</li>
+                        <li style="padding: 5px;">Physics</li>
+                        <li style="padding: 5px;">Chemistry</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-aos="zoom-in-right">
+                <div class="box">
+                    <h1 class="headings" style="padding: 10px;" >10th</h1>
+                    <p>Completed in 2017, from DPS, Aligarh</p>
+                    <h3 style="padding: 10px;">Subjects</h3>
+                    <ul style="text-align: left;">
+                        <li style="padding: 5px;">Hindi</li>
+                        <li style="padding: 5px;">English</li>
+                        <li style="padding: 5px;">Mathematics</li>
+                        <li style="padding: 5px;">S.S.T</li>
+                        <li style="padding: 5px;">Science</li>
+                    </ul>
+                </div>        
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" >
+        <h1 class="headings">CONTACT</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name">
+            <input type="email" name="email" class="input" placeholder="Enter Your Email">
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+            <input style="border:1px white solid;" class="btn" type="submit" value="SEND" id="send">
+        </form>
+        <footer style="margin-left:5vw; width: 80vw;display: flex;justify-content: space-between;">
+            <i style="font-size: 48px" class="fa fa-instagram" aria-hidden="true"></i>
+            <i style="font-size: 48px" class="fa fa-facebook" aria-hidden="true"></i>
+            <i style="font-size: 48px" class="fa fa-twitter" aria-hidden="true"></i>
+            <i style="font-size: 48px" class="fa fa-linkedin" aria-hidden="true"></i>
+        </footer>
+    </section>
+
+    <script>
+        AOS.init();
+        window.onscroll = function() {myFunction()};
+        var color = 0
+        function myFunction() {
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                document.getElementById("change-color").style.backgroundColor = "#4f4f4f";
+            } else {
+                color = document.documentElement.scrollTop/10
+                document.getElementById("change-color").style.backgroundColor = "rgb("+color+","+color+","+color+")";
+            }
+        }
+        function scrollFunction(e){
+            document.getElementById(e).scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
